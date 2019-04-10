@@ -87,7 +87,7 @@ function layerdef(type){
 		});
 	}
 
-	function defaultArea(color){
+	function defaultArea2(color){
 		return(
 		{
 			strokeColor:color,
@@ -97,6 +97,19 @@ function layerdef(type){
 			strokeDashstyle: "6 10",
 			fillColor: "black",
 			fillOpacity: "1",
+		});
+	}
+
+	function defaultArea(color){
+		return(
+		{
+			strokeColor:color,
+			strokeOpacity:0.7,
+			strokeWidth:2,
+			strokeLinecap: "square",
+			strokeDashstyle: "6 10",
+			fillColor: "black",
+			fillOpacity: "1"
 		});
 	}
 	
