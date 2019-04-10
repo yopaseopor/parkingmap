@@ -122,6 +122,13 @@ function layerdef(type){
 				name="#dl#cycleway moped=no",
 				defaultDashedLine("cyan"),
 				false
+				),
+			  
+            make_layer(
+				QURL + "?data=(way[area:parking:condition=ticket][area:parking=perpendicular](bbox);node(w););out+skel;",
+				name="#dl#cycleway moped=no",
+				defaultDashedLine("blue"),
+				false
 			),
 			
             make_layer(
