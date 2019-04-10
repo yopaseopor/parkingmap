@@ -151,6 +151,13 @@ function layerdef(type){
 			),
 			  
             make_layer(
+				QURL + "?data=(way['building'='residential'](bbox);node(w););out+skel;",
+				name="#dl#cycleway moped=no",
+				defaultArea("black"),
+				false
+			),
+			  
+            make_layer(
 				QURL + "?data=(way['area:parking:condition'='free']['area:parking'='perpendicular'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
 				defaultDashedLine("white"),
