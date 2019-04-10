@@ -138,9 +138,9 @@ function layerdef(type){
 			),
 			  
             make_layer(
-				QURL + "?data=(way['area:parking:condition'='ticket']['area:parking'='perpendicular'](bbox);node(w););out+skel;",
+				QURL + "?data=(way['area:parking:condition'='free']['area:parking'='perpendicular'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
-				defaultDashedLine("blue"),
+				defaultDashedLine("white"),
 				false
 			),
 			  
