@@ -152,7 +152,7 @@ function layerdef(type){
 			),
 			  
             make_layer(
-				QURL + "?data=(way['building'='residential'](bbox);area(w););out+skel;",
+				QURL + "?data=(way['building'='residential'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
 				defaultSolidLine2("black"),
 				false
