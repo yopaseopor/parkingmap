@@ -86,6 +86,19 @@ function layerdef(type){
 			strokeDashstyle: "6 10"
 		});
 	}
+
+	function defaultArea(color){
+		return(
+		{
+			strokeColor:color,
+			strokeOpacity:0.7,
+			strokeWidth:2,
+			strokeLinecap: "square",
+			strokeDashstyle: "6 10",
+			fillColor: "black",
+			fillOpacity: "0.5",
+		});
+	}
 	
 	
 		function defaultDashedLine2(color){
@@ -118,11 +131,18 @@ function layerdef(type){
 			),
 			  
             make_layer(
-				QURL + "?data=(way[highway=cycleway][moped=no](bbox);node(w););out+skel;",
+				QURL + "?data=(closedway['area:highway'='residential'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
-				defaultDashedLine("cyan"),
+				defaultArea("black"),
 				false
-				),
+			),
+			  
+            make_layer(
+				QURL + "?data=(way['area:parking:condition'='ticket']['area:parking'='perpendicular'](bbox);node(w););out+skel;",
+				name="#dl#cycleway moped=no",
+				defaultDashedLine("blue"),
+				false
+			),
 			  
             make_layer(
 				QURL + "?data=(way['area:parking:condition'='ticket']['area:parking'='perpendicular'](bbox);node(w););out+skel;",
