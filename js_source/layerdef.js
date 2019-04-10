@@ -114,14 +114,13 @@ function layerdef(type){
 	}
 	
 	
-		function defaultDashedLine2(color){
+		function defaultSolidLine2(color){
 		return(
 		{
 			strokeColor:color,
 			strokeOpacity:0.7,
-			strokeWidth:2,
-			strokeLinecap: "square",
-			strokeDashstyle: "6 10"
+			strokeWidth:800,
+			strokeLinecap: "square"
 		});
 	}
 
@@ -153,7 +152,7 @@ function layerdef(type){
             make_layer(
 				QURL + "?data=(way['building'='residential'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
-				defaultArea("black"),
+				defaultSolidLine2("black"),
 				false
 			),
 			  
