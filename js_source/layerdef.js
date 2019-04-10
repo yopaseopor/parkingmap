@@ -119,7 +119,7 @@ function layerdef(type){
 		{
 			strokeColor:color,
 			strokeOpacity:0.7,
-			strokeWidth:800,
+			strokeWidth:80,
 			strokeLinecap: "square"
 		});
 	}
