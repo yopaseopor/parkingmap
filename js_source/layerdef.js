@@ -96,7 +96,7 @@ function layerdef(type){
 			strokeLinecap: "square",
 			strokeDashstyle: "6 10",
 			fillColor: "black",
-			fillOpacity: "0.5",
+			fillOpacity: "1",
 		});
 	}
 	
