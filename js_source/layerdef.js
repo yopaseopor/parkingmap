@@ -127,7 +127,7 @@ function layerdef(type){
             make_layer(
 				QURL + "?data=(way[amenity=parking_entrance][access=private](bbox);node(w););out+skel;", 
 				name="#l#cycleway mofa=no",
-				defaultSolidLine("yellow"),
+				defaultDashedLine("yellow"),
 				false),
 			
 /*			  
