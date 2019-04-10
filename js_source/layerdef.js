@@ -131,7 +131,7 @@ function layerdef(type){
 			),
 			  
             make_layer(
-				QURL + "?data=(area['area:highway'='residential'](bbox);node(w););out+skel;",
+				QURL + "?data=(way['area:highway'='residential'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
 				defaultArea("black"),
 				false
