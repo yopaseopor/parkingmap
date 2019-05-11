@@ -11,51 +11,7 @@
 // transparantie = 0-1 transparantie van de lijn
 //
 //=====================
-// ====================
-//	
-//	COPIAR	if (type == "nameofthe td id"){                         of index.html
-//  COPIAR	map.addLayers([
-//	COPIAR  make_layer(QURL + "?data=(way[key=value](bbox);node(w);way[otherkey=othervalue](bbox);node(w););out+skel;", "#colorinRGB",name="#typeofline#nameyouwillseeattheslector",circleradius/width of the line,default active (boolean value),"start end of the line@transparency"),
-// COPIAR			]);
-// COPIAR			
-// COPIAR		}
-// INSTRUCCIONS #colorinRGB: RGB color for the line/cercle
-// INSTRUCCIONS #typeofline#: #l# = line, #dl#=double line, #d# = uncontinuous line, #c#= transparent, #co# = cercle opaque
-// INSTRUCCIONS start/end of the line pixels in which start the line
-// INSTRUCCIONS default active option true enabled false unabled
-// INSTRUCCIONS transparency = @0-1 transparency of the line
-//
-//=====================
-// ====================
-//	
-//	COPIAR	if (type == "nombredelaidtd"){                         nombre de la id de la td  de index.html
-//  COPIAR	map.addLayers([
-//	COPIAR  make_layer(QURL + "?data=(nodovíaorelación[clave=valor](bbox);node(w);otronodovíaorelación[otraclave=otrovalor](bbox);node(w););out+skel;", "#colorenRGB",name="#tipodelínea#elnombrequedeseesparaelselector",radiodelcírculo/anchuradelínea,selectoractivooinactivopordefecto (valor booleano),"inicio final de la línea@transparencia"),
-// COPIAR			]);
-// COPIAR			
-// COPIAR		}
-// INSTRUCCIONS #colorenRGB: código RGB del color para la línea/círculo
-// INSTRUCCIONS #tipodelínea#: #l# = línea, #dl#=línea doble, #d# = discontinua, #c#= transparente, #co# = círculo opaco
-// INSTRUCCIONS inicio/fin de la discontinuidad de la línea
-// INSTRUCCIONS selector activado por defecto: true activado false desactivado
-// INSTRUCCIONS transparencia = @0-1 transparencia de la línea
-//
-//=====================
-// ====================
-//	
-//	COPIAR	if (type == "nombredelaidtd"){                         nom de la id de la td  d'index.html
-//  COPIAR	map.addLayers([
-//	COPIAR  make_layer(QURL + "?data=(nodeviaorelació[clau=valor](bbox);node(w);altreviaonodeorelació[altraclau=altrevalor](bbox);node(w););out+skel;", "#colorenRGB",name="#tipusdelínia#elnomquedesitgispelselector",radidelcercle/ampladadelínia,selectoractiuperdefecte (valor booleà),"inici final de la línia@transpareècia"),
-// COPIAR			]);
-// COPIAR			
-// COPIAR		}
-// INSTRUCCIONS #colorenRGB: codi RGB del color per a la línia/cercle
-// INSTRUCCIONS #tipusdelínia#: #l# = línia, #dl#=línia doble, #d# = discontínua, #c#= transparent, #co# = cercle opac
-// INSTRUCCIONS inici/fi de la discontinuitat de la línia
-// INSTRUCCIONS selector activat per defecte: true activat false desactivat
-// INSTRUCCIONS transparència = @0-1 transparència de la línia
-//
-//=====================
+
 function layerdef(type){
 
 	/*
@@ -106,10 +62,8 @@ function layerdef(type){
 			strokeColor:color,
 			strokeOpacity:0.7,
 			strokeWidth:2,
-			strokeLinecap: "square",
-			strokeDashstyle: "6 10",
-			fillColor: "black",
-			fillOpacity: "1"
+			fillColor: #000000,
+			fillOpacity: 1
 		});
 	}
 	
@@ -147,6 +101,13 @@ function layerdef(type){
             make_layer(
 				QURL + "?data=(way['area:highway'='residential'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
+				defaultArea("black"),
+				false
+			),
+			
+			    make_layer(
+				QURL + "?data=(way['area'='yes'](bbox);node(w););out+skel;",
+				name="#dl#area yes=no",
 				defaultArea("black"),
 				false
 			),
