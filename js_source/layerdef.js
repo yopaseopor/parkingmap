@@ -64,7 +64,7 @@ function layerdef(type){
 			strokeWidth:2,
 			strokeLinecap: "square",
 			strokeDashstyle: "6 10",
-			fillColor: "black",
+			fillColor: "#00000",
 			fillOpacity: "1"
 		});
 	}
@@ -102,6 +102,13 @@ function layerdef(type){
 			  
             make_layer(
 				QURL + "?data=(way['area:highway'='residential'](bbox);node(w););out+skel;",
+				name="#dl#cycleway moped=no",
+				defaultArea("black"),
+				false
+			),
+			
+			 make_layer(
+				QURL + "?data=(way['area'='yes'](bbox);node(w););out+skel;",
 				name="#dl#cycleway moped=no",
 				defaultArea("black"),
 				false
