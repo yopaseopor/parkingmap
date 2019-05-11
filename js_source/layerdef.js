@@ -107,8 +107,8 @@ function layerdef(type){
 			
 			 make_layer(
 				QURL + "?data=(way['area'='yes'](bbox);node(w););out+skel;",
-				name="#ex#area yes",
-				defaultArea("black"),
+				name="#l2#area yes",
+				defaultArea("1"),
 				false
 			),
 			  

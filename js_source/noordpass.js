@@ -173,6 +173,7 @@
 	//---- add an image if specified by  placehoder in name, placeholders are #l# > single line, #dl#>line line,#d#>dotted,#ex# for external image
 	//	alert(name);
 	name = name.replace("#l#", "<img style='vertical-align: middle;background-color: " + styleParams.strokeColor + ";' src='img/line.gif'>&nbsp");
+	name = name.replace("#l2#", "<img style='vertical-align: middle;background-color: " + styleParams.fillOpacity + ";' src='img/line.gif'>&nbsp");
 	name = name.replace("#dl#", "<img style='vertical-align: middle;background-color: " + styleParams.strokeColor + ";' src='img/lineline.gif'>&nbsp");
 	name = name.replace("#d#", "<img style='vertical-align: middle;background-color: " + styleParams.strokeColor + ";' src='img/dots.gif'>&nbsp");
 	name = name.replace("#c#", "<img style='vertical-align: middle;background-color: " + styleParams.strokeColor + ";' src='img/tcircle.gif'>&nbsp");
