@@ -73,7 +73,7 @@ function layerdef(type){
 		{
 			strokeColor:color,
 			strokeOpacity:0.7,
-			strokeWidth:80,
+			strokeWidth:8,
 			fillColor: "black",
 			fillOpacity:1,
 			strokeLinecap: "square"
