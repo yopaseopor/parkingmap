@@ -62,9 +62,7 @@ function layerdef(type){
 			strokeColor:color,
 			strokeOpacity:0.7,
 			strokeWidth:2,
-			strokeLinecap: "square",
-			strokeDashstyle: "6 10",
-			fillColor: "#00000",
+			fillColor: "#ff0000",
 			fillOpacity: "1"
 		});
 	}
